@@ -1,0 +1,102 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-sprite-01 {
+  background-image: url(../img/sprite.png);
+  background-position: -263px -195px;
+  width: 90px;
+  height: 48px;
+}
+.icon-sprite-02 {
+  background-image: url(../img/sprite.png);
+  background-position: -263px -63px;
+  width: 77px;
+  height: 61px;
+}
+.icon-sprite-03 {
+  background-image: url(../img/sprite.png);
+  background-position: -139px -77px;
+  width: 94px;
+  height: 67px;
+}
+.icon-sprite-04 {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -167px;
+  width: 74px;
+  height: 77px;
+}
+.icon-sprite-05 {
+  background-image: url(../img/sprite.png);
+  background-position: -213px -254px;
+  width: 104px;
+  height: 34px;
+}
+.icon-sprite-06 {
+  background-image: url(../img/sprite.png);
+  background-position: -263px -134px;
+  width: 89px;
+  height: 51px;
+}
+.icon-sprite-07 {
+  background-image: url(../img/sprite.png);
+  background-position: -263px 0px;
+  width: 93px;
+  height: 53px;
+}
+.icon-sprite-08 {
+  background-image: url(../img/sprite.png);
+  background-position: -104px -254px;
+  width: 99px;
+  height: 43px;
+}
+.icon-sprite-09 {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -254px;
+  width: 94px;
+  height: 46px;
+}
+.icon-sprite-10 {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 129px;
+  height: 69px;
+}
+.icon-sprite-11 {
+  background-image: url(../img/sprite.png);
+  background-position: -139px 0px;
+  width: 114px;
+  height: 67px;
+}
+.icon-sprite-12 {
+  background-image: url(../img/sprite.png);
+  background-position: -84px -167px;
+  width: 88px;
+  height: 62px;
+}
+.icon-sprite-13 {
+  background-image: url(../img/sprite.png);
+  background-position: -182px -167px;
+  width: 67px;
+  height: 61px;
+}
+.icon-sprite-14 {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -79px;
+  width: 99px;
+  height: 78px;
+}

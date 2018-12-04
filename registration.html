@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Регистрация</title>
+    <meta content="" name="author">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/foundation.js"></script>
+    <link rel="stylesheet" href="assets/css/sprite.css">
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script type="text/javascript" language="javascript"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+  </head>
+  <body onload="reg_page = registration_init()">
+    <div id="wrapper">
+      <div class="scroll__wrap">
+        <div class="js-scroll-top"></div>
+      </div>
+      <div class="modal_window">
+        <div class="inner_mw"><i class="fal fa-envelope"></i>
+          <p>На ваш e-mail, после успешной проверки данных, будет отправлено письмо со ссылкой активации.</p><a class="back_mainPage" href="index.html">вернуться на сайт</a>
+        </div>
+      </div>
+      <div class="modal js-modal">
+        <div class="modal__inner">
+          <button class="modal__button" type="submit">отправить</button>
+          <button class="modal__button" type="submit">продолжить регистрацию 2 этапа</button>
+        </div>
+      </div>
+      <div class="modal_window_choice">
+        <div class="mwc_wrap">
+          <button class="choice_1" type="submit">отправить
+            <div class="gradiend_btcomplete_reg-1n"></div>
+          </button>
+          <button class="choice_2" type="submit">продолжить регистрацию 2 этапа
+            <div class="gradiend_btn"></div>
+          </button>
+        </div>
+      </div>
+      <div id="wrapper_reg">
+        <div class="nav">
+          <div class="nav__header">
+            <div class="nav__header__inner">
+              <div class="nav__logo"><img class="nav__logo__image" src="assets/img/logo.png" alt="Logotype Sales Chain"/><img class="nav__logo__image-white" src="assets/img/logo-white-2.svg" alt="Logotype Sales Chain"/></div>
+              <div class="nav__logo-title"><span>сейлз чейн</span>лизинг и страхование</div>
+            </div>
+            <div class="nav__close">
+              <div class="nav__close-icon fal fa-times js-nav-close"></div>
+            </div>
+          </div>
+          <div class="nav__menu">
+            <nav class="nav__menu__item">
+              <li class="nav__menu__list"><a class="nav__menu__link" href="/">Главная страница</a></li>
+              <li class="nav__menu__list active"><a class="nav__menu__link" href="/personal_account.html">Личный кабинет</a></li>
+              <li class="nav__menu__list"><a class="nav__menu__link" href="/monitoring.html">Мониторинг</a></li>
+              <li class="nav__menu__list"><a class="nav__menu__link" href="#">Контакты СЧ</a></li>
+              <li class="nav__menu__list"><a class="nav__menu__link" href="#">Чат</a></li>
+            </nav>
+            <footer class="nav__menu__footer"><a class="nav__menu__link" href="tel:+78003503909">8 (800) 350-39-09</a></footer>
+          </div>
+        </div>
+        <header class="header">
+          <div class="window__inner">
+            <div class="header__inner"><a class="header__logotype" href="/">
+                <div class="header__logo"><img src="assets/img/logo.png" alt="Logotype Sales Chain"/></div>
+                <div class="header__logo-title"><span>сейлз чейн</span>лизинг и страхование</div></a>
+              <ul class="header__menu">
+                <li class="header__menu-list js-header-icon"><i class="far fa-bars"></i></li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <div class="container_reg">
+          <div class="form_reg_one">
+            <div class="first_stage_reg">
+              <div class="wrap_forms_reg">
+                <div class="border_reg"></div>
+                <div class="title_reg"><span>1 этап регистрации</span></div>
+                <div class="forms_reg">
+                  <p class="required_fields">Обязательные для заполнения поля отмечены - *</p>
+                  <div class="block_form">
+                    <label for="lastName"></label>
+                    <input class="field_reg chk" type="text" data-ignore="true" data-text="Поле не должно быть пустое" name="lastName" id="lastName" placeholder="Фамилия *" required tabindex="1">
+                    <div class="form_reg_two__error form__error"></div>
+                  </div>
+                  <div class="block_form">
+                    <label for="name"></label>
+                    <input class="field_reg chk" type="text" data-text="Поле не должно быть пустое" name="name" id="name" placeholder="Имя *" required tabindex="2">
+                    <div class="form_reg_two__error form__error"></div>
+                  </div>
+                  <div class="block_form">
+                    <label for="patronymic"></label>
+                    <input class="field_reg chk" type="text" data-text="Поле не должно быть пустое" name="patronymic" id="patronymic" placeholder="Отчество *" required tabindex="3">
+                    <div class="form_reg_two__error form__error"></div>
+                  </div>
+                  <div class="block_form">
+                    <label for="phone"></label>
+                    <input class="field_reg chk" type="tel" data-text="Поле не должно быть пустое" name="phone" id="phone" placeholder="+7-(___)-___-__-__" required tabindex="4">
+                    <div class="form_reg_two__error form__error"></div>
+                  </div>
+                  <div class="block_form js-email">
+                    <label for="email"></label>
+                    <input class="field_reg chk" type="email" data-text="Email введен некорректно" name="email" id="email" placeholder="Email *" required tabindex="5">
+                    <div class="form_reg_two__error form__error"></div>
+                  </div>
+                </div>
+                <div class="forms_reg pos">
+                  <div class="login_block">
+                    <div class="block_form2 js-login">
+                      <label for="login_reg"></label>
+                      <input class="field_reg chk" type="text" data-text="Логин дожен быть не менее 5 символов" name="login_" id="login_reg" placeholder="Логин *" required tabindex="6">
+                      <div class="form_reg_two__error form__error"></div>
+                    </div>
+                  </div>
+                  <div class="pwd_block">
+                    <div class="block_form2 js-pass-1">
+                      <label id="pwd_field" for="pwd_reg"></label>
+                      <input class="field_reg _pwd chk" type="password" data-type="password" data-text="Поле не должно быть пустое" name="password" id="pwd_reg" placeholder="Пароль *" required tabindex="7">
+                      <div class="show_password" id="pwd1"><i class="far fa-eye ico_eye1"></i></div>
+                      <div class="form_reg_two__error form__error"></div>
+                    </div>
+                    <div class="block_form2 js-pass-2">
+                      <label for="сnf_pwd"></label>
+                      <input class="field_reg _pwd chk" type="password" data-type="password" data-text="Поле не должно быть пустое" name="cnf_password" id="сnf_pwd" placeholder="Подтверждение пароля *" required tabindex="8">
+                      <div class="show_password" id="pwd2"><i class="far fa-eye ico_eye2"></i></div>
+                      <div class="form_reg_two__error form__error"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="oferta_acs">Ознакомьтесь с текстом оферты и подтвердите</div>
+              </div>
+            </div>
+            <div class="offer">
+              <div class="offer_wrap part_1">
+                <div class="of_title">ДОГОВОР ОБ ОКАЗАНИИ УСЛУГ</div>
+                <div class="of_locdate">
+                  <div class="of_loc">г. Москва</div>
+                  <div class="of_date"><span class="date_offer">_______________</span>2018 г.</div>
+                </div>
+                <div class="offer_text">
+                  <p class="indent">
+                    Настоящий Договор являются публичной офертой ООО «Сейлз чейн» и содержит все существенные условия Договораоб оказании услуг (далее – Договор), где ООО «Сейлз чейн» является Заказчиком, а любое физическое лицо, принявшее данную оферту, Исполнителем.</p>
+                  <p class="indent">
+                    Настоящий Договор устанавливается Заказчиком самостоятельно и может быть принят не иначе как путем присоединенияк нему в целом, без каких- либо исключений и оговорок.</p>
+                  <p class="indent">Приложения к Договору является его неотъемлемой частью.</p>
+                </div>
+                <div class="of_title">1. ПРЕДМЕТ ДОГОВОРА</div>
+                <div class="offer_text">
+                  <p>
+                    1.1. Заказчик, на основании акцепта Исполнителя и в соответствии с действующим законодательством Российской Федерации,заключает с Исполнителем настоящий Договор. Взаимоотношения Исполнителя с Заказчиком, не предусмотренные Договором,
+                    регламентируются действующим законодательством РФ.
+                  </p>
+                  <p>
+                    1.2. К действиям, свидетельствующим об акцепте Исполнителем настоящего Договора, относятся:- регистрация на сайте Заказчика в качестве Исполнителя (создание Личного кабинета Исполнителя на сайте Заказчика saleschain.ru);
+                    - ввод в Личном кабинете следующих данных Исполнителя: ФИО , телефон и другие.
+                  </p>
+                  <p>
+                    1.3. По настоящему Договору Исполнитель обязуется оказать услуги по предоставлению информации о юридических лицах,намеревающихся заключить договор лизинга (далее по тексту: клиент или лизингополучатель), а Заказчик обязуется оплатить эти услуги.</p>
+                  <p>
+                    1.4. Услуга считается оказанной, если:- клиент, информация о котором Заказчику предоставлена Исполнителем, заключил с лизинговой компанией (партнером Заказчика)
+                    Договор лизинга (далее – договор лизинга);
+                    - клиент, информация о котором Заказчику предоставлена Исполнителем, уплатил первый платеж (аванс) по графику платежей по договору лизинга;
+                    - предмет лизинга передан клиенту по акту приема-передачи не позднее 1 (одного) месяцев с даты получения Заказчиком
+                    электронного сообщения от Исполнителя в соответствии с пунктом 1.5. настоящего Договора, за исключением случаев длительного срока передачи
+                    в лизинг предмета лизинга (более 3 (трех) месяцев с даты получения Заказчиком электронного сообщения от Исполнителя в соответствии с пунктом 1.5.),
+                    соответствующего сроку поставки по договору купли-продажи. В случаях длительного срока передачи в лизинг предмета лизинга, то услуга считается
+                    оказанной, если передача в лизинг предмета лизинга осуществлена не позднее срока, указанного в договоре купли-продажи и увеличенного на 1 (один) месяц.
+                  </p>
+                  <p class="js-scroll-top-form-end">
+                    1.5. По смыслу настоящего Договора считается, что Исполнитель предоставил информацию о Клиенте, если Исполнитель в Личном кабинете на сайтеЗаказчика saleschain.ru направил Заказчику информацию, содержащую данные лизингополучателя, и при этом выполняются условия о том, что информация,
+                    содержащая контактные данные лизингополучателя и/или его представителя, не была ранее передана Заказчику третьими лицами (в том числе другими
+                    исполнителями) или лизингополучатель ранее самостоятельно не обратился напрямую к Заказчику или лизингополучатель не был привлечен непосредственно
+                    сотрудниками Заказчика. Такая информация должна быть получена Заказчиком до момента заключения договора лизинга и договора купли-продажи предмета
+                    лизинга с указанным лизингополучателем.
+                  </p>
+                </div>
+              </div>
+              <div class="open_full">Прочесть полностью<i class="far fa-arrow-alt-circle-down"></i></div>
+              <div class="offer_wrap part_2">
+                <div class="of_title">2. ПРАВА И ОБЯЗАННОСТИ СТОРОН</div>
+                <div class="offer_text"><span>2.1. Исполнитель обязан:</span>
+                  <p>2.1.1. осуществлять поиск лиц (потенциальных лизингополучателей), намеревающихся заключить договор лизинга;</p>
+                  <p>
+                    2.1.2. предоставлять Заказчику информацию о лицах, указанных в пункте 2.1.1. настоящего Договора, через Личный кабинетна сайте Заказчика: saleschain.ru</p>
+                  <p>
+                    2.1.3. в случае, если информация о лизингополучателях содержит персональные данные, то Исполнитель обязуется получитьсоответствующее согласие от субъекта персональных данных, в том числе на передачу его персональных данных третьим лицам;</p>
+                  <p>
+                    2.1.4. в случае привлечения Заказчика к ответственности в виде штрафов, наложенных государственными органами за нарушениеФедерального Закона 152- ФЗ «О персональных данных», в связи с отсутствием согласия, получение которого было обязанностью
+                    Исполнителя в соответствии с пунктом 2.1.3. настоящего Договора, Исполнитель обязуется компенсировать Заказчику суммы таких
+                    штрафов и/или иных расходов на основании вступивших в законную силу Постановлений о привлечении к административной ответственности
+                    уполномоченных государственных органов или решений судов РФ;
+                  </p>
+                  <p>2.1.5. использовать полученные от Заказчика сведения, исключительно для оказания услуг по настоящему Договору;</p>
+                  <p>
+                    2.1.6. указывать достоверные сведения о себе в Личном кабинете на сайте Заказчика saleschain.ru. При этом, Исполнитель несетответственность за возможные негативные последствия, которые могут возникнуть вследствие указания им недостоверных cведений;</p>
+                  <p>2.1.7. акцептовать акты оказанных услуг в течение трех дней с момента размещения их Заказчиком в Личном кабинете Исполнителя на сайте Заказчика;</p>
+                  <p>2.1.8. выполнять иные обязанности, установленные действующим законодательством или настоящим Договором.</p><span>2.2. Исполнитель имеет право:</span>
+                  <p>
+                    2.2.1. требовать от Заказчика предоставления необходимых инструкций, а также приостанавливать исполнение Договора в случае ихнеполучения в разумный срок;</p>
+                  <p>2.2.2. получать предусмотренное Договором вознаграждение за оказанные услуги;</p>
+                  <p>2.2.3. пользоваться иными правами, предусмотренными действующим законодательством.</p><span>2.3. Заказчик обязан:</span>
+                  <p>2.3.1. своевременно и в необходимом объеме обеспечивать Исполнителя соответствующими инструкциями;</p>
+                  <p>2.3.2. своевременно оплачивать услуги Исполнителя по настоящему Договору;</p>
+                  <p>
+                    2.3.3. размещать в Личном кабинете Исполнителя на сайте Заказчика Акты оказанных услуг по форме, установленной в Приложении № 1к Договору, не позднее двух дней после фактической отгрузки предмета лизинга лизингополучателю;</p>
+                  <p>2.3.4. исчислять, удерживать и уплачивать сумму налога на доходы Исполнителей – физических лиц;</p>
+                  <p>2.3.5. исполнять иные обязанности, предусмотренные действующим законодательством или настоящим Договором;</p><span>2.4. Заказчик имеет право:</span>
+                  <p>2.4.1. контролировать соблюдение Исполнителем настоящего Договора, а также требовать устранения выявленных нарушений настоящего Договора;</p>
+                  <p>
+                    2.4.2. изменить настоящий Договор. Договор считается заключенным на новых условиях по истечению 3 (трех) дней после публикацииновой редакции Договора на сайте Заказчика saleschain.ru;</p>
+                  <p>2.4.3. пользоваться иными правами, предоставленными действующим законодательством или настоящим Договором.</p>
+                </div>
+                <div class="of_title">3. ПОРЯДОК РАСЧЕТОВ</div>
+                <div class="offer_text">
+                  <p>
+                    3.1. Стоимость услуг Исполнителя по настоящему Договору составляет 2,5 %, в т.ч. НДФЛ, от стоимости приобретения предмета лизинга подоговору купли-продажи (стоимость предмета лизинга по договору купли-продажи определяется без учёта НДС);</p>
+                  <p>
+                    3.2. Оплата стоимости услуг Исполнителя производится в срок не более чем 10 (десять) рабочих дней с момента акцепта Исполнителем Актаоказанных услуг в соответствии с п. 2.1.7. Договора путем безналичного перечисления денежных средств по реквизитам Исполнителя,
+                    указанным Исполнителем в Личном кабинете на сайте Заказчика saleschain.ru.
+                  </p>
+                  <p>
+                    В случае, если такие реквизиты Исполнителем не указаны, проценты за использование чужих денежных средств не начисляются, а срок оплатыстоимости услуг Исполнителя, предусмотренный настоящим пунктом, начинает исчисляться с момента указания Исполнителем таких реквизитов.</p>
+                  <p>
+                    3.3. В случае, если стоимость услуг выражена в иностранной валюте, то оплата производится в рублях РФ по курсу ЦБ РФ, установленному надень исполнения обязательств по оплате предмета лизинга по договору купли-продажи в полном объеме;</p>
+                  <p>
+                    3.4. Заказчик не возмещает Исполнителю никакие расходы, понесенные Исполнителем при выполнении обязательств по настоящему Договору.Сумма всех расходов входит в сумму вознаграждения Исполнителя в соответствии с п. 3.1. настоящего Договора.</p>
+                </div>
+                <div class="of_title">4. УСЛОВИЯ О КОНФИДЕНЦИАЛЬНОСТИ И ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ</div>
+                <div class="offer_text">
+                  <p>
+                    4.1. Стороны обязуются обеспечивать соблюдение конфиденциальности полученных в связи с исполнением настоящего Договора сведений,составляющих коммерческую, служебную или иную тайну Сторон.</p>
+                  <p>
+                    4.2. Разглашение или передача третьим лицам подобных сведений может иметь место только с письменного разрешения правообладателя.Указанное ограничение не распространяется на случаи предоставления таких сведений государственным органам в рамках реализации их
+                    установленных законом полномочий.
+                  </p>
+                  <p>
+                    4.3. Сторона, принявшая конфиденциальную информацию и допустившая ее разглашение обязана возместить другой Стороне документальноподтвержденные убытки, причиненные таким разглашением.</p>
+                  <p>
+                    4.4. Заключая настоящий Договор, Исполнитель выражает свое согласие на обработку Заказчиком его персональных данных в соответствиис законодательством РФ, в частности на сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение),
+                    извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных.
+                  </p>
+                </div>
+                <div class="of_title">5. ЗАКЛЮЧИТЕЛЬНЫЕ ПОЛОЖЕНИЯ</div>
+                <div class="offer_text">
+                  <p>5.1. Все сообщения и уведомления будут направляться Сторонами друг другу через Личный кабинет Исполнителя на сайте Заказчика saleschain.ru.</p>
+                  <p>
+                    5.2. Обо всех событиях, имеющих существенное значение для исполнения настоящего Договора, Стороны обязуются уведомлять друг друга в течение 2(двух) рабочих дней с момента, когда о таком событии стало известно одной из Сторон.</p>
+                  <p>5.3. В случае неисполнения или ненадлежащего исполнения настоящего Договора Стороны несут ответственность в соответствии с действующим законодательством.</p>
+                  <p>5.4. Все споры и разногласия, которые возникают в течение срока действия настоящего Договора, разрешаются путем переговоров между Заказчиком и Исполнителем;</p>
+                  <p>5.5. Неурегулированные в досудебном порядке споры разрешаются в суде по юридическому адресу Заказчика.</p>
+                  <p>
+                    5.6. Настоящий Договор считается заключенным в момент совершения Исполнителем действий, указанных в пункте 1.2. настоящего Договора,и действует до момента удаления Исполнителем Личного кабинета на сайте Заказчика saleschain.ru.</p>
+                </div>
+              </div>
+              <div class="close_full js-scroll-top-form">Скрыть<i class="far fa-arrow-alt-circle-up"></i></div>
+            </div>
+            <div class="offer pos js-send">
+              <div class="offer_wrap">
+                <div class="offer_header">
+                  <div class="ofh_text"><span>ООО «Сейлз чейн»</span><span>ИНН:&nbsp;</span>9709035257<span>&nbsp;ОГРН:&nbsp;</span>1187746744020
+                    <p>Юридический адрес: 109147, Россия, г. Москва, ул. Таганская, дом 30/2, этаж 1, помещение  I, комната 1, офис 7.</p>
+                  </div>
+                </div>
+                <div class="offer_print"><img src="assets/img/print_sc.png"></div>
+              </div>
+            </div>
+            <div class="complete_reg-1">
+              <div class="wrap_check1">
+                <div class="col_50 col_100">
+                  <div class="block_check1">
+                    <input class="chk" type="checkbox" id="check_1" name="chk">
+                    <label class="check_label" for="check_1">Я ознакомлен с офертой</label>
+                    <input class="chk" type="checkbox" id="check_2" name="chk2">
+                    <label class="check_label" for="check_2">Я соглас(ен/на) на обработку персональных данных</label>
+                  </div>
+                </div>
+                <div class="captcha">
+                  <!-- вставить в data-sitekey ключ сайта. Подробнее на google reCaptcha-->
+                  <div class="g-recaptcha" data-sitekey="6LfYQHUUAAAAAPP1qZ6ShTHA_gBEoDeisSpDw99k"></div>
+                  <div class="form_reg_two__error form__error form__captcha_mess"></div>
+                </div>
+              </div>
+              <div class="footer_reg">
+                <button class="btnReg_1 btn_disabled js-modal-link" type="submit" id="reg_user" disabled>отправить
+                  <div class="gradiend_btn"></div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="second_stage_reg">
+            <div class="form__title form__title--b">2 этап регистрации</div>
+            <div class="section_block">
+              <div class="reg_wrap">
+                <form class="form form_reg_two">
+                  <div class="form__inner"><span class="form__label">дилерский центр</span>
+                    <select class="wide" data-ignore="true" data-text="Поле не должно быть пустым">
+                      <option data-display="Выберите пункт">-</option>
+                      <option value="1">Пункт</option>
+                      <option value="1">Пункт</option>
+                      <option value="1">Пункт</option>
+                      <option value="1">Пункт</option>
+                      <option value="1">Пункт</option>
+                      <option value="1">Пункт</option>
+                      <option value="1">Пункт</option>
+                      <option value="1">Пункт</option>
+                      <option value="1">Пункт</option>
+                      <option value="1">Пункт</option>
+                      <option value="1">Пункт</option>
+                      <option value="1">Пункт</option>
+                      <option value="1">Пункт</option>
+                    </select>
+                    <div class="form_reg_two__error-select form__error"></div>
+                  </div>
+                  <div class="form__inner"><span class="form__label">марка</span>
+                    <select class="wide" data-text="Поле не должно быть пустым">
+                      <option data-display="Выберите пункт">-</option>
+                      <option value="1">Пункт</option>
+                    </select>
+                    <div class="form_reg_two__error-select form__error"></div>
+                  </div>
+                  <div class="form__title form__title--slim">паспортные данные</div>
+                  <div class="form__inner">
+                    <label class="_reg" for="pass_serial"><span class="form__label">серия</span>
+                      <input class="form__input" type="text" data-ignore="true" data-text="Поле не должно быть пустым" name="pass_serial" id="pass_serial" required placeholder="00 00">
+                      <div class="form_reg_two__error form__error"></div>
+                    </label>
+                  </div>
+                  <div class="form__inner">
+                    <label class="_reg" for="pass_number"><span class="form__label">номер</span>
+                      <input class="form__input" type="text" data-text="Поле не должно быть пустым" name="pass_number" id="pass_number" required placeholder="000000">
+                      <div class="form_reg_two__error form__error"></div>
+                    </label>
+                  </div>
+                  <div class="form__inner">
+                    <label class="_reg" for="date_iss"><span class="form__label">дата выдачи</span>
+                      <div class="date-input">
+                        <input class="form__input" type="date" data-text="Поле не должно быть пустым" name="date_iss" id="date_iss" required placeholder="00.00.0000">
+                        <div class="form_reg_two__error form__error"></div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="form__inner">
+                    <label class="_reg" for="who_iss"><span class="form__label">кем выдан</span>
+                      <input class="form__input" type="text" data-text="Поле не должно быть пустым" name="who_iss" id="who_iss" required placeholder="Текст">
+                      <div class="form_reg_two__error form__error"></div>
+                    </label>
+                  </div>
+                  <div class="form__inner">
+                    <label class="_reg" for="code_seq"><span class="form__label">код подразделения</span>
+                      <input class="form__input" type="text" data-text="Поле не должно быть пустым" name="code_seq" id="code_seq" required placeholder="000-000">
+                      <div class="form_reg_two__error form__error"></div>
+                    </label>
+                  </div>
+                  <div class="form__inner">
+                    <label class="_reg" for="birth_date"><span class="form__label">дата рождения</span>
+                      <div class="date-input">
+                        <input class="form__input" type="date" data-text="Поле не должно быть пустым" name="birth_date" id="birth_date" required placeholder="00.00.0000">
+                        <div class="form_reg_two__error form__error"></div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="form__inner">
+                    <label class="_reg" for="birth_place"><span class="form__label">место рождения</span>
+                      <input class="form__input" type="text" data-text="Поле не должно быть пустым" name="birth_place" id="birth_place" required placeholder="Текст">
+                      <div class="form_reg_two__error form__error"></div>
+                    </label>
+                  </div>
+                  <div class="form__title">регистрация</div>
+                  <div class="form__inner"><span class="form__label">регион федерации</span>
+                    <select class="wide" data-ignore="true" data-text="Поле не должно быть пустым">
+                      <option data-display="Выберите пункт">-</option>
+                      <option value="1">регион 1</option>
+                      <option value="2">регион 2</option>
+                    </select>
+                    <div class="form_reg_two__error-select form__error"></div>
+                  </div>
+                  <div class="form__inner"><span class="form__label">область</span>
+                    <select class="wide" data-ignore="true" data-text="Поле не должно быть пустым">
+                      <option data-display="Выберите пункт">-</option>
+                      <option value="1">Область 1</option>
+                      <option value="2">Область 2</option>
+                    </select>
+                    <div class="form_reg_two__error-select form__error"></div>
+                  </div>
+                  <div class="form__inner"><span class="form__label">район</span>
+                    <select class="wide" data-text="Поле не должно быть пустым">
+                      <option data-display="Выберите пункт">-</option>
+                      <option value="1">Пункт</option>
+                    </select>
+                    <div class="form_reg_two__error-select form__error"></div>
+                  </div>
+                  <div class="form__inner"><span class="form__label">город, муниципальное образование</span>
+                    <select class="wide" data-text="Поле не должно быть пустым">
+                      <option data-display="Выберите пункт">-</option>
+                      <option value="1">Пункт</option>
+                    </select>
+                    <div class="form_reg_two__error-select form__error"></div>
+                  </div>
+                  <div class="form__inner">
+                    <label class="_reg" for="street"><span class="form__label">улица \ переулок \ проезд</span><span class="form__input-list">
+                        <input class="form__input" type="text" data-ignore="true" data-text="Поле не должно быть пустым" name="home" id="street" list="street-list" required placeholder="Текст">
+                        <div class="form_reg_two__error form__error"></div></span></label>
+                    <datalist id="street-list">
+                      <option value="улица 1"></option>
+                      <option value="улица 2"></option>
+                    </datalist>
+                  </div>
+                  <div class="form__inner"><span class="form__label">наименование</span>
+                    <select class="wide" data-text="Поле не должно быть пустым">
+                      <option data-display="Текст">-</option>
+                      <option value="1">Пункт</option>
+                    </select>
+                    <div class="form_reg_two__error-select form__error"></div>
+                  </div>
+                  <div class="form__inner">
+                    <label class="_reg" for="home"><span class="form__label">дом</span>
+                      <input class="form__input" type="number" data-text="Поле не должно быть пустым" name="home" id="home" required placeholder="Номер дома">
+                      <div class="form_reg_two__error form__error"></div>
+                    </label>
+                  </div>
+                  <div class="form__inner">
+                    <label class="_reg" for="cor"><span class="form__label">строение\корпус</span><span class="form__input-list">
+                        <input class="form__input" type="text" data-text="Поле не должно быть пустым" name="home" id="cor" list="code-list" required placeholder="Текст">
+                        <div class="form_reg_two__error form__error"></div></span></label>
+                    <datalist id="code-list">
+                      <option value="стр 1"></option>
+                      <option value="кор 2"></option>
+                    </datalist>
+                  </div>
+                  <div class="form__inner">
+                    <label class="_reg" for="apartment"><span class="form__label">квартира</span>
+                      <input class="form__input" type="number" data-text="Поле не должно быть пустым" name="apartment" id="apartment" required placeholder="Номер квартиры">
+                      <div class="form_reg_two__error form__error"></div>
+                    </label>
+                  </div>
+                  <div class="form__inner">
+                    <label class="_reg" for="zip"><span class="form__label">почтовый индекс</span><span class="form__input-list">
+                        <input class="form__input" type="text" data-text="Поле не должно быть пустым" name="home" id="zip" list="zip-list" required placeholder="Номер">
+                        <div class="form_reg_two__error form__error"></div></span></label>
+                    <datalist id="zip-list">
+                      <option value="123456"></option>
+                      <option value="234567"></option>
+                      <option value="345678"></option>
+                    </datalist>
+                  </div>
+                  <div class="form__inner">
+                    <label class="_reg" for="snils"><span class="form__label">снилс</span>
+                      <input class="form__input" type="text" data-text="Поле не должно быть пустым" name="snils" id="snils" required placeholder="000-000-000 00">
+                      <div class="form_reg_two__error form__error"></div>
+                    </label>
+                  </div>
+                  <div class="form__inner">
+                    <label class="_reg" for="inn"><span class="form__label">инн</span>
+                      <input class="form__input" type="text" data-text="Поле не должно быть пустым" name="inn" id="inn" required placeholder="000000000000">
+                      <div class="form_reg_two__error form__error"></div>
+                    </label>
+                  </div>
+                  <div class="form__title form__title--slim">банковские реквизиты</div>
+                  <div class="form__inner">
+                    <label class="_reg" for="bik"><span class="form__label">бик банка</span><span class="form__input-list">
+                        <input class="form__input" type="text" data-text="Поле не должно быть пустым" name="home" id="bik" list="bik-list" required placeholder="Номер">
+                        <div class="form_reg_two__error form__error"></div></span></label>
+                    <datalist id="bik-list">
+                      <option value="123456789"></option>
+                      <option value="234567891"></option>
+                      <option value="345678912"></option>
+                    </datalist>
+                  </div>
+                  <div class="form__inner">
+                    <label class="_reg" for="bank-name"><span class="form__label">наименование банка</span><span class="form__input-list">
+                        <input class="form__input" type="text" data-text="Поле не должно быть пустым" name="home" id="bank-name" list="bank-name-list" required placeholder="Текст">
+                        <div class="form_reg_two__error form__error"></div></span></label>
+                    <datalist id="bank-name-list">
+                      <option value="123456789"></option>
+                      <option value="234567891"></option>
+                      <option value="345678912"></option>
+                    </datalist>
+                  </div>
+                  <div class="form__inner">
+                    <label class="_reg" for="bank-cor"><span class="form__label">корсчет банка</span><span class="form__input-list">
+                        <input class="form__input" type="text" data-text="Поле не должно быть пустым" name="home" id="bank-cor" list="bank-cor-list" required placeholder="Номер">
+                        <div class="form_reg_two__error form__error"></div></span></label>
+                    <datalist id="bank-cor-list">
+                      <option value="123456789"></option>
+                      <option value="234567891"></option>
+                      <option value="345678912"></option>
+                    </datalist>
+                  </div>
+                  <div class="form__inner">
+                    <label class="_reg" for="back-account"><span class="form__label">расчетный счет</span>
+                      <input class="form__input" type="number" name="back-account" id="back-account" required placeholder="Номер">
+                      <div class="form_reg_two__error form__error"></div>
+                    </label>
+                  </div>
+                  <div class="form__image-group">
+                    <div class="form__inner">
+                      <div id="list"></div>
+                      <label class="form__image-group__label" for="photo_pass">
+                        <div class="form__image-group__upload">
+                          <div class="form__image-group__text"><i class="fal fa-plus-circle"></i><span>Загрузить файл</span></div>
+                        </div>
+                      </label>
+                      <input type="file" name="photo_pass" id="photo_pass" required="" multiple="multiple">
+                      <p class="form__image-group__info">Цветная копия паспорта (разворот 1 страницы и регистрации)</p>
+                    </div>
+                  </div>
+                  <div class="form__check-group">
+                    <input class="box_check" type="checkbox" id="chk_1">
+                    <label class="_check" for="chk_1">Я подтверждаю достоверность введенных личных данных, в том числе банковских реквизитов</label>
+                    <input class="box_check" type="checkbox" id="chk_2">
+                    <label class="_check" for="chk_2">Я согласен\сна на обработку персональных данных</label>
+                    <input class="box_check" type="checkbox" id="chk_3">
+                    <label class="_check" for="chk_3">Я принимаю условия оферты ООО “Сейлз Чейн” (Договора об оказании услуг)</label>
+                  </div>
+                  <div class="form__inner form_button_inner">
+                    <button class="form__button btn_disabled" type="submit" id="reg_user2" disabled="disabled">отправить
+                      <div class="gradiend_btn"></div>
+                    </button>
+                  </div>
+                  <p class="form__info">В случае изменения Ваших персональных данных и банковских реквизитов, Вы должны отредактировать их и направить на платформу для подписания доп. соглашения к оферте. Ваши данные хэшируются,   сохраняются в распределенном реестре (Блок чейне) и используются в смарт контракте.</p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
