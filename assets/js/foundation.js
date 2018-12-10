@@ -599,74 +599,82 @@ function monitor_init() {
   modalShow.init();
 }
 
-'use strict';
-
 var Monitoring =
 /*#__PURE__*/
 function () {
   function Monitoring() {
     _classCallCheck(this, Monitoring);
 
-    this.touchstartx = undefined;
-    this.touchmovex = undefined;
-    this.touchaverage = undefined;
-    this.movex = undefined;
-    this.index = 0;
-    this.longTouch = undefined;
-    this.holder = document.querySelector('.swipe_wrap');
-    this.slideWidth = document.querySelector('.swipe_wrap').offsetWidth;
-    this.bindUIEvents();
-  }
+    // this.touchstartx = undefined;
+    // this.touchmovex = undefined;
+    // this.touchaverage = undefined;
+    // this.movex = undefined;
+    // this.index = 0;
+    // this.longTouch = undefined;
+    // this.holder = document.querySelector('.swipe_wrap');
+    // this.slideWidth = document.querySelector('.swipe_wrap').offsetWidth;
+    // this.bindUIEvents();
+    this.popupMenu_func();
+  } // bindUIEvents(){
+  //     this.holder.addEventListener('touchstart', this.start.bind(this));
+  //     this.holder.addEventListener('touchmove', this.move.bind(this));
+  //     this.holder.addEventListener('touchend', this.end.bind(this));
+  // }
+  // start(event){
+  //     this.longTouch = false;
+  //     this.touchstartx =  event.targetTouches[0].pageX;
+  //     this.movex = undefined;
+  //     this.touchaverage = undefined;
+  // }
+  // move(event){
+  //     this.touchmovex =  event.targetTouches[0].pageX;
+  //     this.movex = (this.index*this.slideWidth + (this.touchstartx - this.touchmovex));
+  //     this.touchaverage = Math.abs(this.touchstartx - this.touchmovex);
+  //
+  //     if (this.movex < this.slideWidth && this.touchaverage > 100 && window.innerWidth <= 479) {
+  //         this.holder.style.transform = 'translate3d(-' + this.movex + 'px,0,0)';
+  //     }
+  // }
+  // end(){
+  //     const absMove = Math.abs(this.index*this.slideWidth - this.movex);
+  //
+  //     if( this.touchaverage > 99) {
+  //         if (absMove > this.slideWidth/2 || this.longTouch === false ) {
+  //             if (this.movex > this.index*this.slideWidth && this.index < 2) {
+  //                 // console.log('++');
+  //                 this.index++;
+  //             } else if (this.movex < this.index*this.slideWidth && this.index > 0) {
+  //                 // console.log('--');
+  //                 this.index--;
+  //             }
+  //         }
+  //
+  //         const width = this.index === 0 ? 0 : 180;
+  //
+  //         // console.log('end', this.movex, this.slideWidth);
+  //         if ((this.movex < this.slideWidth) && window.innerWidth <= 479) {
+  //             this.holder.classList.add('animate');
+  //             // this.holder.style.transform =  'translate3d(-' + this.index*this.slideWidth + 'px,0,0)';
+  //             this.holder.style.transform =  `translate3d(-${width}px,0,0)`;
+  //         }
+  //     }
+  // }
+
 
   _createClass(Monitoring, [{
-    key: "bindUIEvents",
-    value: function bindUIEvents() {
-      this.holder.addEventListener('touchstart', this.start.bind(this));
-      this.holder.addEventListener('touchmove', this.move.bind(this));
-      this.holder.addEventListener('touchend', this.end.bind(this));
-    }
-  }, {
-    key: "start",
-    value: function start(event) {
-      this.longTouch = false;
-      this.touchstartx = event.targetTouches[0].pageX;
-      this.movex = undefined;
-      this.touchaverage = undefined;
-    }
-  }, {
-    key: "move",
-    value: function move(event) {
-      this.touchmovex = event.targetTouches[0].pageX;
-      this.movex = this.index * this.slideWidth + (this.touchstartx - this.touchmovex);
-      this.touchaverage = Math.abs(this.touchstartx - this.touchmovex);
+    key: "popupMenu_func",
+    value: function popupMenu_func() {
+      var monitoring_box = document.querySelectorAll('.monitoring_box');
+      var popupMenu = document.querySelectorAll('.popupMenu');
 
-      if (this.movex < this.slideWidth && this.touchaverage > 100) {
-        this.holder.style.transform = 'translate3d(-' + this.movex + 'px,0,0)';
-      }
-    }
-  }, {
-    key: "end",
-    value: function end() {
-      var absMove = Math.abs(this.index * this.slideWidth - this.movex);
+      var _loop = function _loop(i) {
+        monitoring_box[i].addEventListener('click', function () {
+          popupMenu[i].classList.toggle('change_display');
+        });
+      };
 
-      if (this.touchaverage > 100) {
-        if (absMove > this.slideWidth / 2 || this.longTouch === false) {
-          if (this.movex > this.index * this.slideWidth && this.index < 2) {
-            // console.log('++');
-            this.index++;
-          } else if (this.movex < this.index * this.slideWidth && this.index > 0) {
-            // console.log('--');
-            this.index--;
-          }
-        }
-
-        var width = this.index === 0 ? 0 : 50; // console.log('end', this.movex, this.slideWidth);
-
-        if (this.movex < this.slideWidth) {
-          this.holder.classList.add('animate'); // this.holder.style.transform =  'translate3d(-' + this.index*this.slideWidth + 'px,0,0)';
-
-          this.holder.style.transform = "translate3d(-".concat(width, "vw,0,0)");
-        }
+      for (var i = 0; i < monitoring_box.length; i++) {
+        _loop(i);
       }
     }
   }]);
@@ -689,6 +697,12 @@ function headerShow() {
     var nav = document.querySelector('.nav');
     nav.classList.remove('active');
   });
+}
+
+function personal_detail_init() {
+  headerShow();
+  var form = new Form('.form');
+  form.addEventListeners();
 }
 
 'use strict';
@@ -821,6 +835,7 @@ function sendAjaxRequest(modal_window_choice) {
 
 function formTwo() {
   var form = new Form('.form_reg_two', true, '.form_reg_one');
+  form.file_reading();
   form.files_reading();
   form.addEventListeners();
   var formOne = new Form('.form_reg_one');
@@ -867,9 +882,10 @@ var scrollTop = function () {
             coordSend = getCoords(formSend),
             end = coordSend.top;
         var html = document.documentElement,
-            start = html.scrollTop;
+            start = 0;
+        start = html.scrollTop;
         var interval = setInterval(function () {
-          html.scrollTop = start -= 10;
+          html.scrollTop = start -= 50;
 
           if (start <= end) {
             clearInterval(interval);
@@ -913,9 +929,9 @@ function () {
 
     this.form = document.querySelector(className);
     this.input = this.form.querySelectorAll('input');
-    this.selects = this.form.querySelectorAll('input');
+    this.selects = this.form.querySelectorAll('select');
     this.select = this.form.querySelectorAll('.nice-select');
-    this.submit = this.form.querySelector('button');
+    this.submit = this.form.querySelectorAll('button');
     this.isValid = valid;
     this.formTwo = formTwo;
   }
@@ -947,6 +963,35 @@ function () {
           });
 
           this.select[_i].querySelectorAll('ul li')[j].addEventListener('click', this.errorValidSelect.bind(this));
+        }
+      }
+
+      for (var _i2 = 0; _i2 < this.submit.length; _i2++) {
+        if (this.submit[_i2].classList.contains('js-edit-form')) {
+          this.submit[_i2].addEventListener('click', this.editForm.bind(this));
+        }
+      }
+    }
+  }, {
+    key: "editForm",
+    value: function editForm(event) {
+      for (var i = 0; i < this.input.length; i++) {
+        this.input[i].removeAttribute("disabled");
+      }
+
+      for (var _i3 = 0; _i3 < this.selects.length; _i3++) {
+        this.selects[_i3].removeAttribute("disabled");
+
+        this.select[_i3].classList.remove('disabled');
+      }
+
+      for (var _i4 = 0; _i4 < this.submit.length; _i4++) {
+        if (this.submit[_i4].getAttribute('type') === 'submit') {//this.submit[i].classList.add('btn_success');
+          //this.submit[i].removeAttribute("disabled");
+        } else if (this.submit[_i4].classList.contains('js-edit-form')) {
+          this.submit[_i4].classList.remove('btn_success');
+
+          this.submit[_i4].setAttribute("disabled", "disabled");
         }
       }
     }
@@ -1086,13 +1131,13 @@ function () {
         formTwoActive = formTwoButton.classList.contains('btn_success');
       }
 
-      for (var _i2 = 0; _i2 < this.select.length; _i2++) {
+      for (var _i5 = 0; _i5 < this.select.length; _i5++) {
         // console.log(this.select[i].parentNode.querySelector('select').dataset.ignore);
         // console.log(this.select[i], this.select[i].parentNode.querySelector('select'));
-        if (this.select[_i2].parentNode.querySelector('select').dataset.ignore === 'true') {
+        if (this.select[_i5].parentNode.querySelector('select').dataset.ignore === 'true') {
           matchSelect.push(1);
         } else {
-          if (this.select[_i2].querySelector('.selected').innerText !== '-') {
+          if (this.select[_i5].querySelector('.selected').innerText !== '-') {
             matchSelect.push(1);
           } else {
             matchSelect.push(0);
@@ -1108,20 +1153,31 @@ function () {
       });
 
       if (isValid !== 0 && isValidSelect !== 0 && this.isValid === true && formTwoActive === true) {
-        this.submit.classList.add('btn_success');
-        this.submit.removeAttribute("disabled");
+        for (var _i6 = 0; _i6 < this.submit.length; _i6++) {
+          if (this.submit[_i6].getAttribute('type') === 'submit') {
+            this.submit[_i6].classList.add('btn_success');
+
+            this.submit[_i6].removeAttribute("disabled");
+          }
+        }
       } else {
-        this.submit.classList.remove('btn_success');
-        this.submit.setAttribute("disabled", "disabled");
+        for (var _i7 = 0; _i7 < this.submit.length; _i7++) {
+          if (this.submit[_i7].getAttribute('type') === 'submit') {
+            this.submit[_i7].classList.remove('btn_success');
+
+            this.submit[_i7].setAttribute("disabled", "disabled");
+          }
+        }
       }
     }
   }, {
     key: "file_reading",
     value: function file_reading() {
-      var fileReading = new FileReader();
-      var photoInput = document.querySelectorAll('#photo_pass');
+      var fileReading = new FileReader(); // const photoInput = document.querySelectorAll('#photo_pass');
 
-      var _loop = function _loop(i) {
+      var photoInput = document.querySelectorAll('.js-form-file');
+
+      var _loop2 = function _loop2(i) {
         var fields_image = photoInput[i].parentNode.querySelector('.fields_image');
         var close = photoInput[i].parentNode.querySelector('.fields_image .close');
         var imgage = photoInput[i].parentNode.querySelector('.fields_image img');
@@ -1152,7 +1208,7 @@ function () {
       };
 
       for (var i = 0; i < photoInput.length; i++) {
-        _loop(i);
+        _loop2(i);
       }
     }
   }, {
@@ -1195,7 +1251,7 @@ function handleFileSelect(evt) {
 function handleFileClose() {
   var item = document.querySelectorAll('.form__image-group__image');
 
-  var _loop2 = function _loop2(i) {
+  var _loop3 = function _loop3(i) {
     var close = item[i].querySelector('.close');
     close.addEventListener('click', function () {
       var event = new Event("change");
@@ -1210,7 +1266,7 @@ function handleFileClose() {
   };
 
   for (var i = 0; i < item.length; i++) {
-    _loop2(i);
+    _loop3(i);
   }
 }
 

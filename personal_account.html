@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Личный кабинет</title>
+    <meta content="" name="author">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/foundation.js"></script>
+    <link rel="stylesheet" href="assets/css/sprite.css">
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script type="text/javascript" language="javascript"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+  </head>
+  <body onload="account_init()">
+    <div id="wrapper">
+      <div class="landing_wrap">
+        <div class="priticles-account" id="particles-js"></div>
+        <div class="window__wrap">
+          <div class="nav">
+            <div class="nav__header">
+              <div class="nav__header__inner">
+                <div class="nav__logo"><img class="nav__logo__image" src="assets/img/logo.png" alt="Logotype Sales Chain"/><img class="nav__logo__image-white" src="assets/img/logo-white-2.svg" alt="Logotype Sales Chain"/></div>
+                <div class="nav__logo-title"><span>сейлз чейн</span>лизинг и страхование</div>
+              </div>
+              <div class="nav__close">
+                <div class="nav__close-icon fal fa-times js-nav-close"></div>
+              </div>
+            </div>
+            <div class="nav__menu">
+              <nav class="nav__menu__item">
+                <li class="nav__menu__list"><a class="nav__menu__link" href="/">Главная страница</a></li>
+                <li class="nav__menu__list active"><a class="nav__menu__link" href="/personal_account.html">Личный кабинет</a></li>
+                <li class="nav__menu__list"><a class="nav__menu__link" href="/monitoring.html">Мониторинг</a></li>
+                <li class="nav__menu__list"><a class="nav__menu__link" href="#">Контакты СЧ</a></li>
+                <li class="nav__menu__list"><a class="nav__menu__link" href="#">Чат</a></li>
+              </nav>
+              <footer class="nav__menu__footer"><a class="nav__menu__link" href="tel:+78003503909">8 (800) 350-39-09</a></footer>
+            </div>
+          </div>
+          <header class="header">
+            <div class="window__inner">
+              <div class="header__inner"><a class="header__logotype" href="/">
+                  <div class="header__logo"><img src="assets/img/logo.png" alt="Logotype Sales Chain"/></div>
+                  <div class="header__logo-title"><span>сейлз чейн</span>лизинг и страхование</div></a>
+                <ul class="header__menu">
+                  <li class="header__menu-list"><i class="fas fa-user"></i></li>
+                  <li class="header__menu-list"><i class="fas fa-book-open"></i></li>
+                  <li class="header__menu-list js-header-icon"><i class="far fa-bars"></i></li>
+                </ul>
+              </div>
+            </div>
+          </header>
+          <div class="account__bg">
+            <div class="account__bg__wrap"><i class="icon-sprite-01 account__bg__item-1"></i><i class="icon-sprite-02 account__bg__item-2"></i><i class="icon-sprite-03 account__bg__item-3"></i><i class="icon-sprite-04 account__bg__item-4"></i><i class="icon-sprite-05 account__bg__item-5"></i><i class="icon-sprite-06 account__bg__item-6"></i><i class="icon-sprite-07 account__bg__item-7"></i><i class="icon-sprite-08 account__bg__item-8"></i><i class="icon-sprite-09 account__bg__item-9"></i><i class="icon-sprite-10 account__bg__item-10"></i><i class="icon-sprite-11 account__bg__item-11"></i><i class="icon-sprite-12 account__bg__item-12"></i><i class="icon-sprite-13 account__bg__item-13"></i><i class="icon-sprite-14 account__bg__item-14"></i><i class="icon-sprite-01 account__bg__item-15"></i><i class="icon-sprite-02 account__bg__item-16"></i><i class="icon-sprite-03 account__bg__item-17"></i><i class="icon-sprite-04 account__bg__item-18"></i><i class="icon-sprite-05 account__bg__item-19"></i><i class="icon-sprite-06 account__bg__item-20"></i><i class="icon-sprite-07 account__bg__item-21"></i><i class="icon-sprite-08 account__bg__item-22"></i><i class="icon-sprite-09 account__bg__item-23"></i><i class="icon-sprite-10 account__bg__item-24"></i><i class="icon-sprite-11 account__bg__item-25"></i><i class="icon-sprite-12 account__bg__item-26"></i><i class="icon-sprite-13 account__bg__item-27"></i><i class="icon-sprite-14 account__bg__item-28"></i></div>
+          </div>
+          <div class="window__inner g-paddign-top-48">
+            <div class="account">
+              <div class="account__title">Личный кабинет<br>Иванова И. И.</div>
+              <div class="account__contract">Договор с Сейлз Чейн<br>№123456</div>
+              <address class="account__address">
+                <div class="account__address__title">dd</div>
+                <div class="account__address__text">Адрес: 119017, г.Москва Пыжевский переулок д. 5 стр. 1</div>
+                <div class="account__address__text">Телефон: +7 (495) 953-05-08</div>
+                <div class="account__address__text">Почта: info@saleschain.ru</div>
+                <div class="account__address__text">Сайт: www.saleschain.ru</div>
+              </address>
+              <div class="account__items">
+                <div class="account__item"><a class="account__link" href="/personal_details.html">Персональные данные</a></div>
+                <div class="account__item"><a class="account__link" href="#">Договор</a></div>
+                <div class="account__item"><a class="account__link" href="#">Список заявок/лидов</a></div>
+                <div class="account__item"><a class="account__link" href="#">Акты выполненных работ</a></div>
+                <div class="account__item"><a class="account__link" href="#">Платежи по актам</a></div>
+                <div class="account__item"><a class="account__link" href="#">переписка/чат с СЧ</a></div>
+                <div class="account__item"><a class="account__link" href="#">Нормативка по лизингу</a></div>
+                <div class="account__item"><a class="account__link" href="#">Преимущества лизинга</a></div>
+                <div class="account__item"><a class="account__link" href="#">Лизинговый калькулятор</a></div>
+                <div class="account__car"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
