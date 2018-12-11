@@ -10,10 +10,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function account_init() {
   headerShow();
+  windowWidth();
 
-  if (window.innerWidth <= 479) {
-    setTimeout(animateButtonMargin, 2300);
-  }
+  window.onresize = function () {
+    windowWidth();
+  };
 
   particlesJS('particles-js', {
     "particles": {
@@ -138,6 +139,58 @@ function account_init() {
   });
 }
 
+function windowWidth() {
+  if (window.innerWidth <= 479) {
+    setTimeout(animateButtonMargin, 2300);
+  } else {
+    animateButtonHorisontal(); // console.log('change');
+  }
+}
+
+function animateButtonHorisontal() {
+  var items = document.getElementsByClassName('account__item');
+  var car = document.getElementsByClassName('account__car');
+  setTimeout(function () {
+    car[0].classList.add('active');
+  }, 0); // car
+
+  setTimeout(function () {
+    items[0].classList.add('active');
+  }, 600); // перс
+
+  setTimeout(function () {
+    items[1].classList.add('active');
+  }, 1000); // дог
+
+  setTimeout(function () {
+    items[2].classList.add('active');
+  }, 200); // спис
+
+  setTimeout(function () {
+    items[3].classList.add('active');
+  }, 200); // акты
+
+  setTimeout(function () {
+    items[4].classList.add('active');
+  }, 600); // плат
+
+  setTimeout(function () {
+    items[5].classList.add('active');
+  }, 1000); // пер.ч
+
+  setTimeout(function () {
+    items[6].classList.add('active');
+  }, 1400); // норм
+
+  setTimeout(function () {
+    items[7].classList.add('active');
+  }, 1800); // преим
+
+  setTimeout(function () {
+    items[8].classList.add('active');
+  }, 1400); // лизон
+}
+
 function animateButtonMargin() {
   var items = document.getElementsByClassName('account__item'),
       bg = document.querySelector('.account__bg'),
@@ -145,6 +198,7 @@ function animateButtonMargin() {
 
   for (var i = 0; i < items.length; i++) {
     items[i].style.marginTop = '80px';
+    items[i].classList.remove('active');
   }
 
   bg.classList.add('active');
