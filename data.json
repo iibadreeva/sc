@@ -1,16 +1,338 @@
 {
-  "data": [
+  "RightBlock": {
+    "QueueTicketCounts": {
+      "GreenTickets": 15,
+      "YellowTickets": 4,
+      "RedTickets": 1,
+      "Total": 20
+    },
+    "AwaitingTickets": [
+      {
+        "Letter": "Б",
+        "Number": 172,
+        "CategoryName": "Назначить правоприемников",
+        "StartedAt": "2018-11-09T12:49:13",
+        "AwaitTime": "00:09:26",
+        "Tactic": 1,
+        "AcceptedAt": null,
+        "ServeTime": null
+      },
+      {
+        "Letter": "Б",
+        "Number": 2,
+        "CategoryName": "Назначить правоприемников, yазначить правоприемников",
+        "StartedAt": "2018-11-09T12:49:13",
+        "AwaitTime": "00:44:26",
+        "Tactic": 2,
+        "AcceptedAt": null,
+        "ServeTime": null
+      },
+      {
+        "Letter": "В",
+        "Number": 51,
+        "CategoryName": "Изменить персональные данные",
+        "StartedAt": "2018-11-09T12:49:17",
+        "AwaitTime": "00:35:22",
+        "Tactic": 2,
+        "AcceptedAt": null,
+        "ServeTime": null
+      },
+      {
+        "Letter": "A",
+        "Number": 5,
+        "CategoryName": "Изменить персональные данные2",
+        "StartedAt": "2018-11-09T12:49:17",
+        "AwaitTime": "00:05:22",
+        "Tactic": 1,
+        "AcceptedAt": null,
+        "ServeTime": null
+      },
+      {
+        "Letter": "A",
+        "Number": 7,
+        "CategoryName": "Изменить персональные данные3",
+        "StartedAt": "2018-11-09T12:49:17",
+        "AwaitTime": "00:03:22",
+        "Tactic": 0,
+        "AcceptedAt": null,
+        "ServeTime": null
+      }
+    ]
+  },
+  "CurrentTickets": [
     {
-      "date": "2019-02-19 12:32",
-      "path": "/assets/video/01_ararat.mp4"
+      "Letter": "А",
+      "Number": 201,
+      "WorkstationNumber":3,
+      "CategoryName": "Оформить накопительную пенсию",
+      "CategoryId": 1,
+      "StartedAt": "2018-11-09T12:41:06",
+      "AwaitTime": "00:02:33",
+      "Tactic": 0,
+      "ServiceTactic": 2,
+      "AcceptedAt": "2018-11-09T12:51:39",
+      "ServeTime": "00:10:16"
     },
     {
-      "date": "2019-02-19 12:31",
-      "path": "/assets/video/02_ararat.mp4"
+      "Letter": "Б",
+      "Number": 71,
+      "WorkstationNumber":1,
+      "CategoryName": "Изменить персональные данные",
+      "CategoryId": 2,
+      "StartedAt": "2018-11-09T12:45:10",
+      "AwaitTime": "00:06:45",
+      "Tactic": 1,
+      "ServiceTactic": 1,
+       "AcceptedAt": "2018-11-09T12:51:39",
+      "ServeTime": "00:07:16"
     },
     {
-      "date": "2019-02-19 12:30",
-      "path": "/assets/video/videoplayback.mp4"
+      "Letter": "Б",
+      "Number": 72,
+      "WorkstationNumber":4,
+      "CategoryName": "Назначить правоприемников",
+      "CategoryId": 3,
+      "StartedAt": "2018-11-09T12:49:13",
+      "AwaitTime": "00:12:42",
+      "Tactic": 2,
+      "ServiceTactic": 0,
+      "AcceptedAt": "2018-11-09T12:51:39",
+      "ServeTime": "00:01:16"
+    },
+    {
+      "Letter": "В",
+      "Number": 51,
+      "CategoryName": "Изменить персональные данные",
+      "CategoryId": 2,
+      "StartedAt": "2018-11-09T12:49:17",
+      "AwaitTime": "00:42:38",
+      "Tactic": 2,
+      "ServiceTactic": null,
+      "AcceptedAt": null,
+      "ServeTime": null
+    },
+    {
+      "Letter": "В",
+      "Number": 52,
+      "CategoryName": "Изменить персональные данные",
+      "CategoryId": 2,
+      "StartedAt": "2018-11-09T12:50:17",
+      "AwaitTime": "00:45:38",
+      "Tactic": 2,
+      "ServiceTactic": null,
+      "AcceptedAt": null,
+      "ServeTime": null
+    },
+    {
+      "Letter": "В",
+      "Number": 53,
+      "CategoryName": "Изменить персональные данные",
+      "CategoryId": 2,
+      "StartedAt": "2018-11-09T12:29:17",
+      "AwaitTime": "00:32:38",
+      "Tactic": 2,
+      "ServiceTactic": null,
+      "AcceptedAt": null,
+      "ServeTime": null
     }
-  ]
+  ],
+  "Workstations": [
+    {
+      "IsActive": true,
+      "Number": 1,
+      "ServiceTactic": 0,
+      "WorkpackName": "Cпециалист ФЛ (ККО)",
+      "StaffMemberName": "admin",
+      "ServeTime": "00:00:15.1430000",
+      "CategoryName": "Изменить персональные данные"
+    },
+    {
+      "IsActive": true,
+      "Number": 2,
+      "ServiceTactic": 1,
+      "WorkpackName": "Кассир",
+      "StaffMemberName": "ПЕТРОВ ИВАН",
+      "ServeTime": "00:07:15.1430000",
+      "CategoryName": "ПРЕМИУМ/ ОФОРМЛЕНИЕ ПОТРЕБИТЕЛЬСКОГО КРЕДИТА"
+    },
+    {
+      "IsActive": true,
+      "Number": 3,
+      "ServiceTactic": 0,
+      "WorkpackName": "Кассир ЮЛ",
+      "StaffMemberName": "ПЕТРОВ ИВАН",
+      "ServeTime": "00:04:15.1430000",
+      "CategoryName": "Изменить персональные данные 2"
+    },
+    {
+      "IsActive": true,
+      "Number": 4,
+      "ServiceTactic": 2,
+      "WorkpackName": "Кассир ФЛ",
+      "StaffMemberName": "ПЕТРОВ ИВАН",
+      "ServeTime": "00:10:15.1430000",
+      "CategoryName": "Изменить персональные данные 3"
+    },
+    {
+      "IsActive": true,
+      "Number": 5,
+      "ServiceTactic": 1,
+      "WorkpackName": "Директор ОО",
+      "StaffMemberName": "КассирЮЛсупердлинноеназвание",
+      "ServeTime": "00:09:45.1430000",
+      "CategoryName": "Изменить персональные данные 4"
+    },
+    {
+      "IsActive": false,
+      "Number": 6,
+      "WorkpackName": "Директор ОО",
+      "StaffMemberName": null,
+      "ServeTime": null
+    },
+    {
+      "IsActive": false,
+      "Number": 7,
+      "WorkpackName": "Специалист ФЛ 281 окна 4-5",
+      "StaffMemberName": null,
+      "ServeTime": null
+    },
+    {
+      "IsActive": false,
+      "Number": 8,
+      "WorkpackName": "Cпециалист ФЛ (ККО)",
+      "StaffMemberName": null,
+      "ServeTime": null
+    },
+    {
+      "IsActive": false,
+      "Number": 9,
+      "WorkpackName": "Cпециалист ФЛ (ККО-ОО)",
+      "StaffMemberName": null,
+      "ServeTime": null
+    },
+    {
+      "IsActive": false,
+      "Number": 10,
+      "WorkpackName": "Администратор депозитарных ячеек",
+      "StaffMemberName": null,
+      "ServeTime": null
+    },
+    {
+      "IsActive": false,
+      "Number": 11,
+      "WorkpackName": "Администратор зала",
+      "StaffMemberName": null,
+      "ServeTime": null
+    },
+    {
+      "IsActive": false,
+      "Number": 12,
+      "WorkpackName": "Cпециалист ЮЛ (ККО)",
+      "StaffMemberName": null,
+      "ServeTime": null
+    }
+  ],
+  "BranchInfo": [
+    {
+      "Name": "last_export",
+      "Value": "2019-01-30"
+    },
+    {
+      "Name": "BranchNo",
+      "Value": "1012"
+    },
+    {
+      "Name": "BranchId",
+      "Value": "285XT7XVT"
+    },
+    {
+      "Name": "BranchRoo",
+      "Value": "Филиал Северо-Западный ПАО Банка ФК Открытие"
+    },
+    {
+      "Name": "BranchInfo",
+      "Value": "Дополнительный офис \"На Школьной\"  в п.г.т. Приобье филиала Западно-Сибирский Публичного акционерного общества Банка \"Финансовая Корпорация Открытие\" "
+    },
+    {
+      "Name": "BranchEHD",
+      "Value": "565656"
+    },
+    {
+      "Name": "BranchAddress",
+      "Value": "fgdsg d dgf sd"
+    },
+    {
+      "Name": "BranchCode",
+      "Value": "42343"
+    },
+    {
+      "Name": "BranchName",
+      "Value": "Дополнительный офис \"На Школьной\"  в п.г.т. Приобье филиала Западно-Сибирский Публичного акционерного общества Банка \"Финансовая Корпорация Открытие\" "
+    },
+    {
+      "Name": "CriticalWaitingTime",
+      "Value": "00:15:00"
+    },
+    {
+      "Name": "TresholdResetTime",
+      "Value": "00:01:00"
+    },
+    {
+      "Name": "CriticalServiceTime",
+      "Value": "00:15:00"
+    }
+  ],
+  "BranchWordWeek": [
+        {
+            "WorkPeriod": {
+                "Start": "09:45:00",
+                "End": "21:45:00"
+            },
+            "BreakPeriod": null
+        },
+        {
+            "WorkPeriod": {
+                "Start": "09:00:00",
+                "End": "21:45:00"
+            },
+            "BreakPeriod": {
+                "Start": "14:45:00",
+                "End": "15:45:00"
+            }
+        },
+        {
+            "WorkPeriod": {
+                "Start": "08:00:00",
+                "End": "20:00:00"
+            },
+            "BreakPeriod": null
+        },
+        {
+            "WorkPeriod": null,
+            "BreakPeriod": null
+        },
+        {
+            "WorkPeriod": {
+                "Start": "09:00:00",
+                "End": "21:00:00"
+            },
+            "BreakPeriod": null
+        },
+        {
+            "WorkPeriod": {
+                "Start": "09:35:00",
+                "End": "21:35:00"
+            },
+            "BreakPeriod": {
+                "Start": "13:00:00",
+                "End": "14:45:00"
+            }
+        },
+        {
+            "WorkPeriod": null,
+            "BreakPeriod": null
+        }
+    ],
+  "IsAdminOrSuperAdmin":false,
+  "AdaptiveLogicStates":[{"Logic":1,"WorkstationNumber":2,"WorkstationName":"Какое-то окошно!","WorkingSince":"2019-05-20T06:00:00+03:00","StaffMemberName":"какой то там содруник","WorkpackName":"имя трм туть"}]
 }
