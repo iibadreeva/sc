@@ -334,5 +334,5 @@
         }
     ],
   "IsAdminOrSuperAdmin":false,
-  "AdaptiveLogicStates":[{"Logic":1,"WorkstationNumber":2,"WorkstationName":"Какое-то окошно11!","WorkingSince":"2019-05-20T06:00:00+03:00","StaffMemberName":"какой то там содруник","WorkpackName":"имя трм туть"}]
+  "AdaptiveLogicStates":[{"Logic":1,"WorkstationNumber":2,"WorkstationName":"Какое-то окошно!","WorkingSince":"2019-05-20T06:00:00+03:00","StaffMemberName":"какой то там содруник","WorkpackName":"имя трм туть"}]
 }
